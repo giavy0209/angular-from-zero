@@ -1,0 +1,30 @@
+<main class="main">
+  <h1 class="title">Todo App</h1>
+  <div class="add" (click)="add()">Add todo</div>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let todo of todoList">
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.description }}</td>
+      <td>{{ todo.date.toLocaleString() }}</td>
+      <td>{{ todo.status }}</td>
+      <td>
+        <div class="edit" (click)="editItem(todo)">Edit</div>
+        <div class="delete">Delete</div>
+      </td>
+    </tr>
+  </table>
+
+  <app-modal
+    (newItemEvent)="addItem($event)"
+    [name]="isAdd ? 'Add todo' : 'Edit todo'"
+    [editItem]="isEdit"
+    *ngIf="isAdd || isEdit"
+  ></app-modal>
+</main>

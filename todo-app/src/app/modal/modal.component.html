@@ -1,0 +1,12 @@
+<div class="modal">
+  <h3>{{name}}</h3>
+  <form [formGroup]="form"  (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="title" placeholder="Title">
+    <input type="text" formControlName="description" placeholder="Description">
+    <input type="date" formControlName="date" placeholder="date">
+    <select formControlName="status" >
+      <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+    </select>
+    <button type="submit">{{name}}</button>
+  </form>
+</div>

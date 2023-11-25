@@ -1,0 +1,27 @@
+.main {
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .add {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    cursor: pointer;
+  }
+  table, th, td {
+    border: 1px solid;
+  }
+  .table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    .edit,.delete {
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

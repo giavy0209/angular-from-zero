@@ -1,0 +1,24 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 60%;
+  min-width: 300px;
+  padding: 100px;
+  border: 1px solid #000;
+  form {
+    input,select {
+      width: 100%;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+}
